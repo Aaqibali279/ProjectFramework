@@ -13,7 +13,7 @@ enum Method:String{
 import Foundation
 class Network{
     
-    func request<T:Decodable>(url:String,method:Method,headers:[String:String]? = nil,body:[[String:String]]? = nil,queryItems:[String:String]? = nil,success:@escaping (T)->(),message:@escaping (String) -> ()) {
+    func request<Element:Decodable>(url:String,method:Method,headers:[String:String]? = nil,body:[[String:String]]? = nil,queryItems:[String:String]? = nil,success:@escaping (Element)->(),message:@escaping (String) -> ()) {
         
         guard var urlComponents = URLComponents.init(string: url) else {
             message(Constants.ERROR_MESSAGE)
@@ -54,7 +54,7 @@ class Network{
             }
             
             do{
-                let obj = try JSONDecoder().decode(T.self, from: data)
+                let obj = try JSONDecoder().decode(Element.self, from: data)
                 success(obj)
             }catch{
                 message(error.localizedDescription)
@@ -82,10 +82,7 @@ class Network{
         for (key,value) in queryItems{
             items.append(URLQueryItem.init(name: key, value: value))
         }
-        
         return items
-        
-        
     }
     
     //MARK:- HTTPBODY DATA
