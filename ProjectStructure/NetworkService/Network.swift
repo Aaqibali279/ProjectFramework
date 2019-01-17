@@ -31,6 +31,7 @@ class Network{
         request.httpMethod = method.rawValue
         request.allHTTPHeaderFields = headers
         request.httpBody = getData(params: body)
+        
         print(body?.description ?? Constants.ERROR_MESSAGE)
         print(headers?.description ?? Constants.ERROR_MESSAGE)
         

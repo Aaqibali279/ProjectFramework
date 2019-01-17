@@ -8,7 +8,9 @@
 
 import UIKit
 
-class CustomViewController: UIViewController,UIGestureRecognizerDelegate{
+class ViewController: UIViewController,UIGestureRecognizerDelegate{
+    
+    
 
     //MARK:- PROPERTIES
     var screenHeight:CGFloat = 0
@@ -57,7 +59,7 @@ class CustomViewController: UIViewController,UIGestureRecognizerDelegate{
     }
     
     @objc func backAction(){
-        navigationController?.popViewController(animated: false)
+        navigationController?.popViewController(animated: true)
     }
     
     func animateConstraint(constraint:NSLayoutConstraint,constant:CGFloat,duration:Double){
@@ -70,7 +72,7 @@ class CustomViewController: UIViewController,UIGestureRecognizerDelegate{
     func setBackButtonInNavBar() {
         navigationController?.isNavigationBarHidden = false
         navigationItem.setHidesBackButton(true, animated: false)
-        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.tintColor = .primaryColor
         let leftBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "back"), style: .plain, target: self, action: #selector(backAction))
         navigationItem.leftBarButtonItem = leftBarButton
     }
@@ -91,33 +93,12 @@ class CustomViewController: UIViewController,UIGestureRecognizerDelegate{
         navigationItem.setHidesBackButton(true, animated: false)
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.tintColor = UIColor.white.withAlphaComponent(0.40)
-        navigationController?.navigationBar.barTintColor = .primaryColor
+        navigationController?.navigationBar.barTintColor = UIColor.primaryColor
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
     }
    
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        
-        let fromViewController = transitionContext.viewController(forKey: .from)
-        guard let toViewController = transitionContext.viewController(forKey: .to) else{
-            return
-        }
-        let finalFrameForVC = transitionContext.finalFrame(for: toViewController)
-        let containerView = transitionContext.containerView
-        let bounds = UIScreen.main.bounds
-        toViewController.view.frame = toViewController.view.frame.offsetBy(dx: 0, dy: bounds.size.height)
-        containerView.addSubview(toViewController.view)
-        
-        UIView.animate(withDuration: 1, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0, options: .curveLinear, animations: {
-            fromViewController?.view.alpha = 0.5
-            toViewController.view.frame = finalFrameForVC
-        }, completion: {
-            finished in
-            transitionContext.completeTransition(true)
-            fromViewController?.view.alpha = 1.0
-        })
-    }
     //MARK:- TOAST
     func showToast(message:String?,isFailure:Bool = false,toastCompletion: ((Bool) -> ())? = nil){
         toastLabel.text = message
@@ -168,20 +149,14 @@ class CustomViewController: UIViewController,UIGestureRecognizerDelegate{
         }
     }
     
-    private var toastView = { () -> UIView in
+    private lazy var toastView = { () -> UIView in
         let view = UIView()
         view.clipsToBounds = true
         view.layer.cornerRadius = 5
         return view
     }()
     
-    var uiView = { () -> UIView in
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }
-    
-    private var toastLabel = { () -> Label in
+    private lazy var toastLabel = { () -> Label in
         let label = Label(textAlignment: .center, fontType: .regular, fontSize: FontSize.text_15)
         return label
     }()

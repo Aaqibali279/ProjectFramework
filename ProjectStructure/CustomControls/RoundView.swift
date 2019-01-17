@@ -8,11 +8,7 @@
 
 import UIKit
 class RoundView: UIView {
-    
     private var radiusMultiplier:CGFloat = 0
-    
-    var drawRect: (CGRect) -> () = { _ in }
-    
     init(radiusMultiplier:CGFloat = 0.5,backgroundColor:UIColor = .white) {
         super.init(frame: .zero)
         self.backgroundColor = backgroundColor
@@ -22,7 +18,7 @@ class RoundView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        self.drawRect(rect)
+        super.draw(rect)
         layer.cornerRadius = frame.height * radiusMultiplier
     }
     
@@ -43,3 +39,4 @@ class RoundView: UIView {
         print("RoundView deallocated")
     }
 }
+

@@ -16,14 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        
-        let vc = ViewController()
-        let nvc = UINavigationController.init(rootViewController: vc)
+        let vc = MainViewController()
+        let nvc = NavigationController(rootViewController:vc)
+        nvc.transitionAnimations(enable: true)
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = nvc
         window?.makeKeyAndVisible()
-        
-        
         return true
     }
 

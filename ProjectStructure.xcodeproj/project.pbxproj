@@ -18,14 +18,17 @@
 		1046929021EE0C2E001A6658 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1046928F21EE0C2E001A6658 /* UINavigationController.swift */; };
 		1046929921EE0E88001A6658 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1046929821EE0E88001A6658 /* Label.swift */; };
 		1046929B21EE0EC8001A6658 /* Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1046929A21EE0EC8001A6658 /* Completions.swift */; };
-		1046929D21EE1AC1001A6658 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1046929C21EE1AC1001A6658 /* CustomViewController.swift */; };
+		1046929D21EE1AC1001A6658 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1046929C21EE1AC1001A6658 /* ViewController.swift */; };
 		104692AA21EEF694001A6658 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104692A921EEF694001A6658 /* Network.swift */; };
 		104692AC21EEF6C5001A6658 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104692AB21EEF6C5001A6658 /* Constants.swift */; };
 		104692AE21EEF6EF001A6658 /* MyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104692AD21EEF6EF001A6658 /* MyUserDefaults.swift */; };
 		104692B021EEF74C001A6658 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104692AF21EEF74C001A6658 /* Alert.swift */; };
 		104692B221EEF7BC001A6658 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104692B121EEF7BC001A6658 /* RoundView.swift */; };
+		104692B821F04BBC001A6658 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104692B721F04BBC001A6658 /* View.swift */; };
+		104692BA21F0652A001A6658 /* NextVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104692B921F0652A001A6658 /* NextVCViewController.swift */; };
+		104692BC21F0907E001A6658 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104692BB21F0907E001A6658 /* NavigationController.swift */; };
 		10FF81C021ECB0690093EC70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF81BF21ECB0690093EC70 /* AppDelegate.swift */; };
-		10FF81C221ECB0690093EC70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF81C121ECB0690093EC70 /* ViewController.swift */; };
+		10FF81C221ECB0690093EC70 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF81C121ECB0690093EC70 /* MainViewController.swift */; };
 		10FF81C721ECB0690093EC70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10FF81C621ECB0690093EC70 /* Assets.xcassets */; };
 		10FF81CA21ECB0690093EC70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10FF81C821ECB0690093EC70 /* LaunchScreen.storyboard */; };
 		10FF81D621ECC0430093EC70 /* BankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF81D521ECC0430093EC70 /* BankCell.swift */; };
@@ -37,7 +40,6 @@
 		101F056821EDED5E00E813C9 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		101F056A21EDEDF500E813C9 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		101F056C21EDEEEC00E813C9 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		1046927721EE0732001A6658 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		1046928521EE0B6D001A6658 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		1046928721EE0B9B001A6658 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		1046928921EE0BBA001A6658 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -46,15 +48,18 @@
 		1046928F21EE0C2E001A6658 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		1046929821EE0E88001A6658 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		1046929A21EE0EC8001A6658 /* Completions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Completions.swift; sourceTree = "<group>"; };
-		1046929C21EE1AC1001A6658 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		1046929C21EE1AC1001A6658 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		104692A921EEF694001A6658 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		104692AB21EEF6C5001A6658 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		104692AD21EEF6EF001A6658 /* MyUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUserDefaults.swift; sourceTree = "<group>"; };
 		104692AF21EEF74C001A6658 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		104692B121EEF7BC001A6658 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		104692B721F04BBC001A6658 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		104692B921F0652A001A6658 /* NextVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextVCViewController.swift; sourceTree = "<group>"; };
+		104692BB21F0907E001A6658 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		10FF81BC21ECB0690093EC70 /* ProjectStructure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectStructure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10FF81BF21ECB0690093EC70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		10FF81C121ECB0690093EC70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		10FF81C121ECB0690093EC70 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		10FF81C621ECB0690093EC70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10FF81C921ECB0690093EC70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10FF81CB21ECB0690093EC70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,7 +82,9 @@
 		101F057021EE034C00E813C9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				10FF81C121ECB0690093EC70 /* ViewController.swift */,
+				10FF81C121ECB0690093EC70 /* MainViewController.swift */,
+				104692B921F0652A001A6658 /* NextVCViewController.swift */,
+				104692BB21F0907E001A6658 /* NavigationController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -101,7 +108,7 @@
 		101F057321EE03B300E813C9 /* CustomControls */ = {
 			isa = PBXGroup;
 			children = (
-				1046929C21EE1AC1001A6658 /* CustomViewController.swift */,
+				1046929C21EE1AC1001A6658 /* ViewController.swift */,
 				1046929A21EE0EC8001A6658 /* Completions.swift */,
 				101F056821EDED5E00E813C9 /* CollectionView.swift */,
 				10FF81D721ECC0B70093EC70 /* TableView.swift */,
@@ -109,6 +116,7 @@
 				101F056C21EDEEEC00E813C9 /* CollectionViewCell.swift */,
 				1046929821EE0E88001A6658 /* Label.swift */,
 				104692B121EEF7BC001A6658 /* RoundView.swift */,
+				104692B721F04BBC001A6658 /* View.swift */,
 			);
 			path = CustomControls;
 			sourceTree = "<group>";
@@ -116,7 +124,6 @@
 		1046927621EE071B001A6658 /* AlertsAndProgress */ = {
 			isa = PBXGroup;
 			children = (
-				1046927721EE0732001A6658 /* AlertView.swift */,
 				104692AF21EEF74C001A6658 /* Alert.swift */,
 			);
 			path = AlertsAndProgress;
@@ -262,16 +269,19 @@
 				104692B221EEF7BC001A6658 /* RoundView.swift in Sources */,
 				104692AC21EEF6C5001A6658 /* Constants.swift in Sources */,
 				101F056921EDED5E00E813C9 /* CollectionView.swift in Sources */,
+				104692BA21F0652A001A6658 /* NextVCViewController.swift in Sources */,
 				1046928C21EE0BDF001A6658 /* Double.swift in Sources */,
 				10FF81D821ECC0B70093EC70 /* TableView.swift in Sources */,
+				104692BC21F0907E001A6658 /* NavigationController.swift in Sources */,
 				1046928E21EE0C02001A6658 /* UIColor.swift in Sources */,
 				104692B021EEF74C001A6658 /* Alert.swift in Sources */,
 				1046929B21EE0EC8001A6658 /* Completions.swift in Sources */,
-				1046929D21EE1AC1001A6658 /* CustomViewController.swift in Sources */,
+				104692B821F04BBC001A6658 /* View.swift in Sources */,
+				1046929D21EE1AC1001A6658 /* ViewController.swift in Sources */,
 				101F056D21EDEEEC00E813C9 /* CollectionViewCell.swift in Sources */,
 				10FF81DA21ECC1000093EC70 /* TableViewCell.swift in Sources */,
 				1046928821EE0B9B001A6658 /* Date.swift in Sources */,
-				10FF81C221ECB0690093EC70 /* ViewController.swift in Sources */,
+				10FF81C221ECB0690093EC70 /* MainViewController.swift in Sources */,
 				10FF81D621ECC0430093EC70 /* BankCell.swift in Sources */,
 				1046928A21EE0BBA001A6658 /* String.swift in Sources */,
 				1046929921EE0E88001A6658 /* Label.swift in Sources */,
