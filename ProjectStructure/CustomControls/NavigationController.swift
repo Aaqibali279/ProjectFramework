@@ -70,15 +70,13 @@ class Transitioning: NSObject,UIViewControllerAnimatedTransitioning {
         leftIV.transform = CGAffineTransform(translationX: isPush ? -translationX : 0, y: 0)
         rightIV.transform = CGAffineTransform(translationX: isPush ? translationX : 0, y: 0)
         
-        UIView.animateKeyframes(withDuration: 2 * duration, delay: 0, options: [], animations: {
+        UIView.animate(withDuration: 2 * duration, delay: 0, options: .curveEaseOut, animations: {
             leftIV.transform = CGAffineTransform(translationX: isPush ? 0 : -translationX , y: 0)
             rightIV.transform = CGAffineTransform(translationX: isPush ? 0 : translationX , y: 0)
         }) { (finished) in
-            
             if isPush{
                 container.addSubview(toView)
             }
-            
             leftIV.removeFromSuperview()
             rightIV.removeFromSuperview()
             transitionContext.completeTransition(true)

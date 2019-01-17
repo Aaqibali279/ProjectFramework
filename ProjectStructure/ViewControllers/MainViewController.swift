@@ -15,28 +15,14 @@ class MainViewController:ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         setNavBar()
-//        navigationController?.isNavigationBarHidden = true
-//        let label = Label(textAlignment: .center, fontType: .bold, fontSize: .text_15)
-//        view.addSubview(label)
-//        label.text = "Project Structure"
-//        label.fillSuperView()
         
-        
-        let uiView = View()
-        view.addSubview(uiView)
-        uiView.backgroundColor = .red
-        uiView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        uiView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        uiView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5).isActive = true
-        uiView.setAspectRatio(multiplier: 1)
-        
-//        view.layoutIfNeeded()
-        setGesture(view: uiView, selector: #selector(launch))
-        uiView.dropShadow()
-        
-        
+        let label = Label(textAlignment: .center, fontType: .bold, fontSize: .text_15)
+        view.addSubview(label)
+        label.textColor = .white
+        label.text = "Project Structure\nANIMATE"
+        label.fillSuperView()
+        setGesture(view: label, selector: #selector(launch))
         
         
         

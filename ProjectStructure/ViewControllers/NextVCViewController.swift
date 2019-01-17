@@ -20,19 +20,24 @@ class NextVCViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .purple
         
-        let uiView = View()
-        view.addSubview(uiView)
-        uiView.backgroundColor = .blue
-        uiView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        uiView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        uiView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5).isActive = true
-        uiView.setAspectRatio(multiplier: 1)
+        var banks = [Bank]()
+        for index in 0...10{
+            banks.append(Bank.init(bankName: "Bank\(index)", accountNumber: "\(index * 10000)"))
+        }
+
         
-        setGesture(view: uiView, selector: #selector(backAction))
-        uiView.dropShadow()
-        
+        let tableView = TableView<Bank, BankCell>()
+        view.addSubview(tableView)
+        tableView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        tableView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+        tableView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        tableView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        tableView.list = banks
+        tableView.didSelectRowAt = { (indexPath,bank) -> Void in
+            print("\(indexPath.row)",bank?.bankName)
+        }
+
     }
     
     

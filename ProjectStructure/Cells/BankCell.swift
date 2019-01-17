@@ -9,7 +9,6 @@
 import UIKit
 class BankCell: TableViewCell<Bank> {
     
-    
     override var item: Bank?{
         didSet{
             bankNameLabel.text = item?.bankName
@@ -29,23 +28,25 @@ class BankCell: TableViewCell<Bank> {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
+        selectionStyle = .none
         addSubview(bankNameLabel)
 
         bankNameLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
         bankNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        bankNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        bankNameLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5).isActive = true
+        bankNameLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        bankNameLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5).isActive = true
         
         addSubview(accountNumberLabel)
         
         accountNumberLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        accountNumberLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        accountNumberLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
         accountNumberLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        accountNumberLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5).isActive = true
+        accountNumberLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5).isActive = true
     }
 }
 
 class AccountCell: CollectionViewCell<Bank> {
+    
     override var item: Bank?{
         didSet{
             bankNameLabel.text = item?.bankName
