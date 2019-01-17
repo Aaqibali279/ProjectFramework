@@ -15,7 +15,6 @@
 		1046928A21EE0BBA001A6658 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1046928921EE0BBA001A6658 /* String.swift */; };
 		1046928C21EE0BDF001A6658 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1046928B21EE0BDF001A6658 /* Double.swift */; };
 		1046928E21EE0C02001A6658 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1046928D21EE0C02001A6658 /* UIColor.swift */; };
-		1046929021EE0C2E001A6658 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1046928F21EE0C2E001A6658 /* UINavigationController.swift */; };
 		1046929921EE0E88001A6658 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1046929821EE0E88001A6658 /* Label.swift */; };
 		1046929B21EE0EC8001A6658 /* Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1046929A21EE0EC8001A6658 /* Completions.swift */; };
 		1046929D21EE1AC1001A6658 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1046929C21EE1AC1001A6658 /* ViewController.swift */; };
@@ -45,7 +44,6 @@
 		1046928921EE0BBA001A6658 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		1046928B21EE0BDF001A6658 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		1046928D21EE0C02001A6658 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		1046928F21EE0C2E001A6658 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		1046929821EE0E88001A6658 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		1046929A21EE0EC8001A6658 /* Completions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Completions.swift; sourceTree = "<group>"; };
 		1046929C21EE1AC1001A6658 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 				1046928921EE0BBA001A6658 /* String.swift */,
 				1046928B21EE0BDF001A6658 /* Double.swift */,
 				1046928D21EE0C02001A6658 /* UIColor.swift */,
-				1046928F21EE0C2E001A6658 /* UINavigationController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -287,7 +284,6 @@
 				1046929921EE0E88001A6658 /* Label.swift in Sources */,
 				104692AA21EEF694001A6658 /* Network.swift in Sources */,
 				104692AE21EEF6EF001A6658 /* MyUserDefaults.swift in Sources */,
-				1046929021EE0C2E001A6658 /* UINavigationController.swift in Sources */,
 				10FF81C021ECB0690093EC70 /* AppDelegate.swift in Sources */,
 				101F056B21EDEDF500E813C9 /* Bank.swift in Sources */,
 			);
