@@ -84,7 +84,6 @@
 			children = (
 				10FF81C121ECB0690093EC70 /* MainViewController.swift */,
 				104692B921F0652A001A6658 /* NextVCViewController.swift */,
-				104692BB21F0907E001A6658 /* NavigationController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -108,6 +107,7 @@
 		101F057321EE03B300E813C9 /* CustomControls */ = {
 			isa = PBXGroup;
 			children = (
+				104692BB21F0907E001A6658 /* NavigationController.swift */,
 				1046929C21EE1AC1001A6658 /* ViewController.swift */,
 				1046929A21EE0EC8001A6658 /* Completions.swift */,
 				101F056821EDED5E00E813C9 /* CollectionView.swift */,
