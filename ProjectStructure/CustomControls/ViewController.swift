@@ -70,20 +70,18 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate{
     }
     
     func setBackButtonInNavBar() {
-        navigationController?.isNavigationBarHidden = false
-        navigationItem.setHidesBackButton(true, animated: false)
-        navigationController?.navigationBar.tintColor = .primaryColor
         let leftBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "back"), style: .plain, target: self, action: #selector(backAction))
         navigationItem.leftBarButtonItem = leftBarButton
     }
     
-    func setNavBarTitle(title:NSMutableAttributedString){
+    func setNavBarTitle(title:String){
         if let navBar = navigationController?.navigationBar{
             let titleLabel = UILabel()
             titleLabel.textAlignment = .center
             titleLabel.frame = CGRect(x: 0, y: 0, width: navBar.frame.width/2, height: navBar.frame.height)
             titleLabel.center = navBar.center
-            titleLabel.attributedText = title
+            titleLabel.text = title
+            titleLabel.textColor = navigationController?.navigationBar.tintColor
             navigationItem.titleView = titleLabel
         }
     }
@@ -91,9 +89,9 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate{
     func setNavBar(){
         navigationController?.isNavigationBarHidden = false
         navigationItem.setHidesBackButton(true, animated: false)
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.tintColor = UIColor.white.withAlphaComponent(0.40)
-        navigationController?.navigationBar.barTintColor = UIColor.primaryColor
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.barTintColor = .clear
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]

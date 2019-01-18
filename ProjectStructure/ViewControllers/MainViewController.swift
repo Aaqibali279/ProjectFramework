@@ -13,18 +13,34 @@ import Foundation
 class MainViewController:ViewController {
     
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.blue.withAlphaComponent(0.5)
         setNavBar()
+        setNavBarTitle(title: "Main")
+//        setBackButtonInNavBar()
+//        let label = Label(textAlignment: .center, fontType: .bold, fontSize: .text_15)
+//        view.addSubview(label)
+//        label.textColor = .white
+//        label.text = "Project Structure\n\n\n\n[ANIMATE]"
+//        label.fillSuperView()
+//        setGesture(view: label, selector: #selector(launch))
         
-        let label = Label(textAlignment: .center, fontType: .bold, fontSize: .text_15)
-        view.addSubview(label)
-        label.textColor = .white
-        label.text = "Project Structure\nANIMATE"
-        label.fillSuperView()
-        setGesture(view: label, selector: #selector(launch))
         
+        let button = Button()
+        button.setTitle("Animate", for: .normal)
+        button.titleLabel?.font = UIFont(name: FontType.regular.rawValue, size: FontSize.sub_title_28.rawValue)
+        button.setBackgroundColor(.purple, for: .highlighted)
+        button.setBackgroundColor(.gray, for: .normal)
         
+        view.addSubview(button)
+        
+        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        button.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        button.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.25).isActive = true
+        
+        button.addTarget(self, action: #selector(launch), for: .touchUpInside)
         
 //        var banks = [Bank]()
 //
@@ -69,13 +85,16 @@ class MainViewController:ViewController {
 //        tableView.didSelectRowAt = { (indexPath,bank) -> Void in
 //            print("\(indexPath.row)",bank?.bankName)
 //        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-
     }
     
     @objc
     func launch() {
-        navigationController?.pushViewController(NextVCViewController(), animated: true)
+        navigationController?.pushViewController(LoginViewController(), animated: true)
     }
     
 }

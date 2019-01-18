@@ -9,12 +9,20 @@
 import UIKit
 class NavigationController: UINavigationController,UINavigationControllerDelegate {
     
+    
     func transitionAnimations(enable:Bool){
         delegate = enable ? self : nil
     }
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
         return Transitioning(opertaion: operation)
+    }
+    
+    func setRootViewController(vc: UIViewController){
+        self.viewControllers.removeAll()
+        self.pushViewController(vc, animated: false)
+        self.popToRootViewController(animated: false)
     }
 }
 
@@ -24,7 +32,7 @@ class Transitioning: NSObject,UIViewControllerAnimatedTransitioning {
         self.opertaion = opertaion
     }
     
-    private var opertaion:UINavigationControllerOperation!
+    private var opertaion:UINavigationControllerOperation = .pop
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return TimeInterval(UINavigationControllerHideShowBarDuration)
@@ -34,8 +42,8 @@ class Transitioning: NSObject,UIViewControllerAnimatedTransitioning {
         
         guard let fromView = transitionContext.view(forKey: .from) else { return }
         guard let toView = transitionContext.view(forKey: .to) else { return }
-        
-        let duration = transitionDuration(using: transitionContext)
+
+        let duration = 1.5 * transitionDuration(using: transitionContext)
         let container = transitionContext.containerView
         let animationView:UIView
         
@@ -70,7 +78,7 @@ class Transitioning: NSObject,UIViewControllerAnimatedTransitioning {
         leftIV.transform = CGAffineTransform(translationX: isPush ? -translationX : 0, y: 0)
         rightIV.transform = CGAffineTransform(translationX: isPush ? translationX : 0, y: 0)
         
-        UIView.animate(withDuration: 2 * duration, delay: 0, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: {
             leftIV.transform = CGAffineTransform(translationX: isPush ? 0 : -translationX , y: 0)
             rightIV.transform = CGAffineTransform(translationX: isPush ? 0 : translationX , y: 0)
         }) { (finished) in
@@ -83,24 +91,12 @@ class Transitioning: NSObject,UIViewControllerAnimatedTransitioning {
         }
     }
     
-    
-    func image(view:UIView,bounds:CGRect,isOpaque:Bool) -> UIImage? {
-        if #available(iOS 10.0, *) {
-            let renderer = UIGraphicsImageRenderer(bounds: bounds)
-            let image = renderer.image(actions: { (rendererContext) in
-                view.layer.render(in: rendererContext.cgContext)
-            })
-            return image
-        } else {
-            
-            UIGraphicsBeginImageContextWithOptions(bounds.size, isOpaque, 0.0)
-            defer { UIGraphicsEndImageContext() }
-            guard let currentContext = UIGraphicsGetCurrentContext() else{
-                return nil
-            }
-            view.layer.render(in: currentContext)
-            return UIGraphicsGetImageFromCurrentImageContext()
-        }
+    func image(view:UIView,bounds:CGRect,isOpaque:Bool) -> UIImage{
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        let image = renderer.image(actions: { (rendererContext) in
+            view.layer.render(in: rendererContext.cgContext)
+        })
+        return image
     }
     
 }

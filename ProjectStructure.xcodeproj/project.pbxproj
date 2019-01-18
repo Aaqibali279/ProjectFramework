@@ -24,8 +24,12 @@
 		104692B021EEF74C001A6658 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104692AF21EEF74C001A6658 /* Alert.swift */; };
 		104692B221EEF7BC001A6658 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104692B121EEF7BC001A6658 /* RoundView.swift */; };
 		104692B821F04BBC001A6658 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104692B721F04BBC001A6658 /* View.swift */; };
-		104692BA21F0652A001A6658 /* NextVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104692B921F0652A001A6658 /* NextVCViewController.swift */; };
+		104692BA21F0652A001A6658 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104692B921F0652A001A6658 /* CustomTabBarController.swift */; };
 		104692BC21F0907E001A6658 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104692BB21F0907E001A6658 /* NavigationController.swift */; };
+		10D402CE21F1D96600D963E6 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D402CD21F1D96600D963E6 /* Button.swift */; };
+		10D402D021F1E20B00D963E6 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D402CF21F1E20B00D963E6 /* UINavigationController.swift */; };
+		10D402D221F1E32400D963E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D402D121F1E32400D963E6 /* LoginViewController.swift */; };
+		10D402D421F1E81600D963E6 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D402D321F1E81600D963E6 /* TextField.swift */; };
 		10FF81C021ECB0690093EC70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF81BF21ECB0690093EC70 /* AppDelegate.swift */; };
 		10FF81C221ECB0690093EC70 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF81C121ECB0690093EC70 /* MainViewController.swift */; };
 		10FF81C721ECB0690093EC70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10FF81C621ECB0690093EC70 /* Assets.xcassets */; };
@@ -53,8 +57,12 @@
 		104692AF21EEF74C001A6658 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		104692B121EEF7BC001A6658 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		104692B721F04BBC001A6658 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		104692B921F0652A001A6658 /* NextVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextVCViewController.swift; sourceTree = "<group>"; };
+		104692B921F0652A001A6658 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		104692BB21F0907E001A6658 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		10D402CD21F1D96600D963E6 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		10D402CF21F1E20B00D963E6 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		10D402D121F1E32400D963E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		10D402D321F1E81600D963E6 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		10FF81BC21ECB0690093EC70 /* ProjectStructure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectStructure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10FF81BF21ECB0690093EC70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10FF81C121ECB0690093EC70 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				10FF81C121ECB0690093EC70 /* MainViewController.swift */,
-				104692B921F0652A001A6658 /* NextVCViewController.swift */,
+				104692B921F0652A001A6658 /* CustomTabBarController.swift */,
+				10D402D121F1E32400D963E6 /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -115,6 +124,8 @@
 				1046929821EE0E88001A6658 /* Label.swift */,
 				104692B121EEF7BC001A6658 /* RoundView.swift */,
 				104692B721F04BBC001A6658 /* View.swift */,
+				10D402CD21F1D96600D963E6 /* Button.swift */,
+				10D402D321F1E81600D963E6 /* TextField.swift */,
 			);
 			path = CustomControls;
 			sourceTree = "<group>";
@@ -135,6 +146,7 @@
 				1046928921EE0BBA001A6658 /* String.swift */,
 				1046928B21EE0BDF001A6658 /* Double.swift */,
 				1046928D21EE0C02001A6658 /* UIColor.swift */,
+				10D402CF21F1E20B00D963E6 /* UINavigationController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -262,11 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10D402D221F1E32400D963E6 /* LoginViewController.swift in Sources */,
 				1046928621EE0B6D001A6658 /* UIView.swift in Sources */,
 				104692B221EEF7BC001A6658 /* RoundView.swift in Sources */,
+				10D402D421F1E81600D963E6 /* TextField.swift in Sources */,
 				104692AC21EEF6C5001A6658 /* Constants.swift in Sources */,
 				101F056921EDED5E00E813C9 /* CollectionView.swift in Sources */,
-				104692BA21F0652A001A6658 /* NextVCViewController.swift in Sources */,
+				104692BA21F0652A001A6658 /* CustomTabBarController.swift in Sources */,
 				1046928C21EE0BDF001A6658 /* Double.swift in Sources */,
 				10FF81D821ECC0B70093EC70 /* TableView.swift in Sources */,
 				104692BC21F0907E001A6658 /* NavigationController.swift in Sources */,
@@ -277,9 +291,11 @@
 				1046929D21EE1AC1001A6658 /* ViewController.swift in Sources */,
 				101F056D21EDEEEC00E813C9 /* CollectionViewCell.swift in Sources */,
 				10FF81DA21ECC1000093EC70 /* TableViewCell.swift in Sources */,
+				10D402CE21F1D96600D963E6 /* Button.swift in Sources */,
 				1046928821EE0B9B001A6658 /* Date.swift in Sources */,
 				10FF81C221ECB0690093EC70 /* MainViewController.swift in Sources */,
 				10FF81D621ECC0430093EC70 /* BankCell.swift in Sources */,
+				10D402D021F1E20B00D963E6 /* UINavigationController.swift in Sources */,
 				1046928A21EE0BBA001A6658 /* String.swift in Sources */,
 				1046929921EE0E88001A6658 /* Label.swift in Sources */,
 				104692AA21EEF694001A6658 /* Network.swift in Sources */,
