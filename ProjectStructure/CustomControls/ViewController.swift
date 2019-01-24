@@ -2,7 +2,7 @@
 //  CustomViewController.swift
 //  ChoiceInvest
 //
-//  Created by osx on 08/10/18.
+//  Created by Aqib Ali on 08/10/18.
 //  Copyright © 2018 osx. All rights reserved.
 //
 

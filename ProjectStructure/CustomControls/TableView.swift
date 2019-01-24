@@ -2,11 +2,11 @@
 //  TableView.swift
 //  GenericTableView
 //
-//  Created by osx on 14/01/19.
+//  Created by Aqib Ali on 14/01/19.
 //  Copyright © 2019 osx. All rights reserved.
 //
 import UIKit
-class TableView<Modal,Cell:TableViewCell<Modal>>: UITableView ,UITableViewDelegate,UITableViewDataSource{
+class TableView<Model,Cell:TableViewCell<Model>>: UITableView ,UITableViewDelegate,UITableViewDataSource{
     
     
     init() {
@@ -23,7 +23,7 @@ class TableView<Modal,Cell:TableViewCell<Modal>>: UITableView ,UITableViewDelega
         fatalError("init(coder:) has not been implemented")
     }
     
-    var list:[Modal]?{
+    var list:[Model]?{
         didSet{
             reloadData()
         }

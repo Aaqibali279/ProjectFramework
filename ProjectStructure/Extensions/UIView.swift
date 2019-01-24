@@ -2,7 +2,7 @@
 //  UIView.swift
 //  ProjectStructure
 //
-//  Created by osx on 15/01/19.
+//  Created by Aqib Ali on 15/01/19.
 //  Copyright © 2019 osx. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  Constants.swift
 //  ProjectStructure
 //
-//  Created by osx on 16/01/19.
+//  Created by Aqib Ali on 16/01/19.
 //  Copyright © 2019 osx. All rights reserved.
 //
 

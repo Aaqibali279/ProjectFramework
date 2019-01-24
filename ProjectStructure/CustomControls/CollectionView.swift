@@ -2,13 +2,13 @@
 //  CollectionView.swift
 //  GenericTableView
 //
-//  Created by osx on 15/01/19.
+//  Created by Aqib Ali on 15/01/19.
 //  Copyright © 2019 osx. All rights reserved.
 //
 
 import UIKit
 
-class CollectionView<Modal,Cell:CollectionViewCell<Modal>>: UICollectionView,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+class CollectionView<Model,Cell:CollectionViewCell<Model>>: UICollectionView,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
 
     init(flowLayout:UICollectionViewFlowLayout) {
         let layout = UICollectionViewFlowLayout()
@@ -25,7 +25,7 @@ class CollectionView<Modal,Cell:CollectionViewCell<Modal>>: UICollectionView,UIC
     var itemSize = CGSize.init(width: UIScreen.main.bounds.width, height: 100)
     var cellId = "CellId"
     
-    var list:[Modal]?{
+    var list:[Model]?{
         didSet{
             reloadData()
         }
