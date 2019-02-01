@@ -21,7 +21,7 @@ class CollectionView<Model,Cell:CollectionViewCell<Model>>: UICollectionView,UIC
         register(Cell.self, forCellWithReuseIdentifier: cellId)
     }
     
-    var didSelectRowAt:DidSelectRowAt<Modal>?
+    var didSelectRowAt:DidSelectRowAt<Model>?
     var itemSize = CGSize.init(width: UIScreen.main.bounds.width, height: 100)
     var cellId = "CellId"
     

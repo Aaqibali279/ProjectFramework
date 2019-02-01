@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController,UIGestureRecognizerDelegate{
     
     
-
     //MARK:- PROPERTIES
     var screenHeight:CGFloat = 0
     var statusBarHeight:CGFloat =  0

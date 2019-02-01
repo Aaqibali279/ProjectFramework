@@ -34,7 +34,7 @@ class Network{
         
         print(body?.description ?? Constants.ERROR_MESSAGE)
         print(headers?.description ?? Constants.ERROR_MESSAGE)
-        
+      
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             guard let data = data else{
@@ -63,13 +63,8 @@ class Network{
             
             print("----------------------------------")
         }
-        
         task.resume()
         
-    }
-    
-    deinit {
-        print("Network deallocated")
     }
     
     //MARK:- QUERY ITEMS
@@ -106,6 +101,10 @@ class Network{
         }
         return data as Data
         
+    }
+    
+    deinit {
+        print("Network deallocated")
     }
 }
 

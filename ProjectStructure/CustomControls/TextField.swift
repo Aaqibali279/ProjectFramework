@@ -22,14 +22,18 @@ class TextField: UITextField,UITextFieldDelegate {
     init() {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
-        delegate = self
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    var textFieldDelegate:TextFieldDelegate?
+    var textFieldDelegate:TextFieldDelegate?{
+        didSet{
+            delegate = self
+        }
+    }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let text = NSString(string: textField.text!).replacingCharacters(in: range, with: string)

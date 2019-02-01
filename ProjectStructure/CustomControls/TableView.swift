@@ -30,8 +30,7 @@ class TableView<Model,Cell:TableViewCell<Model>>: UITableView ,UITableViewDelega
     }
     var cellId = "CellId"
     var heightForRow:CGFloat = 50
-    var didSelectRowAt:DidSelectRowAt<Modal>?
-    
+    var didSelectRowAt:DidSelectRowAt<Model>?
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
